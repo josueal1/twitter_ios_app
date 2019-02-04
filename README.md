@@ -2,7 +2,7 @@
 
 Twitter_IOS_Starter is a basic Twitter client that allows users to log in and view their feed.
 
-Time spent: **1.5** hours spent in total
+Time spent: **3.25** hours spent in total
 
 ## User Stories
 
