@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="135" id="Itb-Zg-Ew4" customClass="TweetCellTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="135" id="Itb-Zg-Ew4" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Itb-Zg-Ew4" id="8Jd-Rq-Yct">
@@ -68,7 +68,9 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsF-GY-02F">
                                             <rect key="frame" x="10" y="10" width="65" height="65"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="Mbt-xx-dXd"/>
                                                 <constraint firstAttribute="width" constant="65" id="gdi-TC-syL"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="guW-dh-jnR"/>
                                                 <constraint firstAttribute="height" constant="65" id="zMM-Go-wMm"/>
                                             </constraints>
                                         </imageView>
@@ -96,6 +98,11 @@
                                         <constraint firstItem="fsF-GY-02F" firstAttribute="top" secondItem="8Jd-Rq-Yct" secondAttribute="top" constant="10" id="u97-gF-qq2"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="fsF-GY-02F" id="SN0-97-DaU"/>
+                                    <outlet property="tweetContentLabel" destination="mpM-vE-yQh" id="M5k-fC-yJy"/>
+                                    <outlet property="userNameLabel" destination="LBT-IN-BqJ" id="n9q-ih-5QI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
