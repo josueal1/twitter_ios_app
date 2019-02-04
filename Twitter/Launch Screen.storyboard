@@ -18,12 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Twitter_Logo_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="9Qm-fj-LJb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Twitter_Logo_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="9Qm-fj-LJb">
                                 <rect key="frame" x="70" y="234" width="235" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Qm-fj-LJb" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="6PW-g7-hAg"/>
+                            <constraint firstItem="9Qm-fj-LJb" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="cUG-fH-R6N"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
                 </viewController>
