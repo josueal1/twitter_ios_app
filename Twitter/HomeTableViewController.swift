@@ -24,6 +24,11 @@ class HomeTableViewController: UITableViewController {
         // we want to reverse back to the login page
         // the screen will dismiss itself, animation
         self.dismiss(animated: true, completion: nil)
+        
+        // Beforing completely dismissing the app,
+        // we want to let the app know the current
+        // session for our session should be false
+        UserDefaults.standard.set(false, forKey: "userLoggedIn")
     }
     // MARK: - Table view data source
 

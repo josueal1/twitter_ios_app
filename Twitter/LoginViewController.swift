@@ -16,16 +16,35 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Now, every time the app runs, it will check
+    // if the var. loggedIn is true or false
+    override func viewDidAppear(_ animated: Bool) {
+        // Note: Before requesting the user enter their
+        // account credentials, we want to ask the app
+        // if remember a user is still in session by
+        // asking UserDefaults.
+        
+        if UserDefaults.standard.bool(forKey: "userLoggedIn") {
+            performSegue(withIdentifier: "loginToHome", sender: self )
+        }
+        
+    }
+    
+    // This function will direct users to their home screen
     @IBAction func onLoginButton(_ sender: Any) {
         let twitterLoginURL = "https://api.twitter.com/oauth/request_token"
         
         TwitterAPICaller.client?.login(url: twitterLoginURL, success: { 
-            // We want users to be directed to their home screen
             
-            // Therefore, we will trigger the segue (modal connection)
-            // connection between (login page) and (HomeScreen)
+            // Therefore, we will trigger the segue
+            
+            // Before performing segue, we creating a
+            // variable in memory to remember the status
+            // of the user's session.
+            UserDefaults.standard.set(true, forKey: "userLoggedIn")
             
             self.performSegue(withIdentifier: "loginToHome", sender: self)
+            // connection between (login page) and (HomeScreen)
             
             
         }, failure: { (Error) in
