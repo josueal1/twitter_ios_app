@@ -40,9 +40,12 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         loadTweets()
-       
+    }
+    
+    func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        loadTweets()
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

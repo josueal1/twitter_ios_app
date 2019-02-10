@@ -119,6 +119,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="W0Z-1y-aB1">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="96X-5o-MXy" kind="presentation" id="jDD-ks-0JK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -187,10 +190,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tweetTextView" destination="CF6-DY-NIy" id="MNm-Gp-YGd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRB-yp-QFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2978" y="232"/>
+            <point key="canvasLocation" x="2682" y="233"/>
         </scene>
         <!--Tweet Navigation Controller-->
         <scene sceneID="Cwv-MK-iJ5">
@@ -209,7 +215,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqx-Cg-7RY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090" y="232"/>
+            <point key="canvasLocation" x="1890" y="232"/>
         </scene>
     </scenes>
 </document>
