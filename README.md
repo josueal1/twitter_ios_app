@@ -2,7 +2,7 @@
 
 Twitter_IOS_Starter is a basic Twitter client that allows users to log in and view their feed.
 
-Time spent: **1.5** hours spent in total
+Time spent: **3.25** hours spent in total
 
 ## User Stories
 
@@ -12,7 +12,7 @@ The following **required** functionality is completed:
 - [x] User can log in. (1pt)
 - [x] User can log out. (1pt)
 - [x] User stays logged in across restarts. (1pt)
-- [ ] User can view tweets with the user profile picture, username, and tweet text. (6pts)
+- [x] User can view tweets with the user profile picture, username, and tweet text. (6pts)
 
 The following **bonus** features are implemented:
 
@@ -23,5 +23,5 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/9V96e4OenhfGGX1Csz/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
