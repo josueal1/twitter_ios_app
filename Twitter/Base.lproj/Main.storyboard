@@ -86,7 +86,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 mintues ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6V-CW-Zv7" userLabel="Minutes Label">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 mintues ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6V-CW-Zv7" userLabel="timeLabel">
                                             <rect key="frame" x="263" y="21" width="96" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="0IR-Y5-PYn"/>
@@ -103,6 +103,9 @@
                                                 <constraint firstAttribute="height" constant="30" id="ycF-fn-ML5"/>
                                             </constraints>
                                             <state key="normal" image="favor-icon"/>
+                                            <connections>
+                                                <action selector="favoriteTweet:" destination="Itb-Zg-Ew4" eventType="touchUpInside" id="mM7-eL-VEE"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1D-SD-TdQ" userLabel="retweetButton">
                                             <rect key="frame" x="274" y="99" width="30" height="30"/>
@@ -111,6 +114,9 @@
                                                 <constraint firstAttribute="height" constant="30" id="cuq-6p-P1h"/>
                                             </constraints>
                                             <state key="normal" image="retweet-icon"/>
+                                            <connections>
+                                                <action selector="reTweet:" destination="Itb-Zg-Ew4" eventType="touchUpInside" id="rlI-yx-1i6"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -133,7 +139,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favButton" destination="hjQ-qQ-TOq" id="GCn-U2-0SZ"/>
                                     <outlet property="profileImageView" destination="fsF-GY-02F" id="SN0-97-DaU"/>
+                                    <outlet property="retweetButton" destination="b1D-SD-TdQ" id="HzC-PM-DIn"/>
+                                    <outlet property="timeLabel" destination="x6V-CW-Zv7" id="KuJ-37-fX4"/>
                                     <outlet property="tweetContentLabel" destination="mpM-vE-yQh" id="M5k-fC-yJy"/>
                                     <outlet property="userNameLabel" destination="LBT-IN-BqJ" id="n9q-ih-5QI"/>
                                 </connections>
