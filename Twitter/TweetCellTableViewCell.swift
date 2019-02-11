@@ -19,10 +19,28 @@ class TweetCellTableViewCell: UITableViewCell {
     
     var favorited:Bool = false
     var tweetID: Int = -1
+    var retweeted:Bool = false
     
     @IBAction func reTweet(_ sender: Any) {
-        // change icon
-        // send api to retweet
+        TwitterAPICaller.client?.retweet(tweetID: tweetID, success: {
+            self.setRetweet(true)
+        }, failure: { (error) in
+            print("Error in retweeting .. \(error)")
+        })
+    }
+    
+    func setRetweet(_ isRetweeted:Bool){
+        if (isRetweeted){
+            retweetButton.setImage(UIImage(named: "retweet-icon-green"), for: UIControl.State.normal)
+            retweetButton.isEnabled = false
+        }
+        else{
+            retweetButton.setImage(UIImage(named: "retweet-icon"), for: UIControl.State.normal)
+            retweetButton.isEnabled = true
+        }
+        
+        
+        
     }
     
     @IBAction func favoriteTweet(_ sender: Any) {
